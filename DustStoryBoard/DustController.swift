@@ -10,8 +10,8 @@ import UIKit
 import Alamofire
 
 class DustController: UIViewController {
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var dustTable: UITableView!
+    @IBOutlet var dateLabel: UILabel! // 날짜
+    @IBOutlet var dustTable: UITableView! // table
     var airArray: [Air] = []
     
     override func viewDidLoad() {
@@ -26,9 +26,8 @@ class DustController: UIViewController {
     }
     
     func getDusts() -> Void {
-        let url = "http://openapi.seoul.go.kr:8088/5963636d767333353639476875796d/json/" +
-                        "ListAirQualityByDistrictService/1/25/"; // 다영 url 변경
-
+        let url = "http://openapi.seoul.go.kr:8088/5963636d767333353639476875796d/json/ListAirQualityByDistrictService/1/25/"; // 다영 url 변경
+    // http://openapi.seoul.go.kr:8088/5963636d767333353639476875796d/json/ListAirQualityByDistrictService/1/25
         AF.request(url).responseString(encoding: .utf8) { response in
             switch response.result {
             case .success(let value):
@@ -49,8 +48,16 @@ class DustController: UIViewController {
         self.dustTable.reloadData()
         if airArray.count != 0 {
             var str = String(airArray[0].MSRDATE.dropLast(2)) // 날짜 가져온다. 뒤에 가져오는 '분'에 해당하는 2개 문자는 제거한다.
-            str = str + " 기준"
-            self.dateLabel.text = str
+            
+        
+            let dateStr = str.prefix(8)  // 시간을 제거한 날짜
+            let hourStr = str.suffix(2)  // 시간
+            
+            let sub_str = dateStr + "일 "+hourStr+"시 기준"
+            // str = hour + "시 기준"
+            
+            self.dateLabel.text = sub_str // label에 값 대입
+            
         }
     }
 }
@@ -73,9 +80,11 @@ extension DustController : UITableViewDataSource, UITableViewDelegate {
             label.text = self.airArray[indexPath.row].MSRSTENAME
         }
         if let label = cell.contentView.viewWithTag(2) as? UILabel {
+            print( self.airArray[indexPath.row].PM10)
             label.text = self.airArray[indexPath.row].PM10
         }
         if let label = cell.contentView.viewWithTag(3) as? UILabel {
+            print(self.airArray[indexPath.row].GRADE)
             if self.airArray[indexPath.row].GRADE != "" {
                 label.text = self.airArray[indexPath.row].GRADE
             } else {

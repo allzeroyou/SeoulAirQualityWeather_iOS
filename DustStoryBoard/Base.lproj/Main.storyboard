@@ -141,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="id" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAo-Qq-jYc">
-                                <rect key="frame" x="127.5" y="84" width="120" height="26.5"/>
+                                <rect key="frame" x="127.5" y="124" width="120" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Pqa-wB-wNh"/>
                                 </constraints>
@@ -149,20 +149,29 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-OY-RF4">
-                                <rect key="frame" x="127.5" y="130.5" width="120" height="25"/>
+                                <rect key="frame" x="127.5" y="170.5" width="120" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="s1Y-bJ-hMr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디와 패스워드를 입력하세요~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7if-tD-wgN">
+                                <rect key="frame" x="75" y="89" width="225" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WP7-jf-1Kz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YPU-OY-RF4" firstAttribute="top" secondItem="pAo-Qq-jYc" secondAttribute="bottom" constant="20" id="4DD-QR-zcp"/>
-                            <constraint firstItem="pAo-Qq-jYc" firstAttribute="top" secondItem="WP7-jf-1Kz" secondAttribute="top" constant="20" id="C3t-wt-Bfa"/>
+                            <constraint firstItem="7if-tD-wgN" firstAttribute="top" secondItem="WP7-jf-1Kz" secondAttribute="top" constant="25" id="J9a-6o-wpb"/>
+                            <constraint firstItem="pAo-Qq-jYc" firstAttribute="top" secondItem="7if-tD-wgN" secondAttribute="bottom" constant="20" id="TEn-8Y-g0v"/>
                             <constraint firstItem="pAo-Qq-jYc" firstAttribute="centerX" secondItem="tyZ-81-Unh" secondAttribute="centerX" id="aeW-YU-Q29"/>
+                            <constraint firstItem="7if-tD-wgN" firstAttribute="centerX" secondItem="tyZ-81-Unh" secondAttribute="centerX" id="gDq-RK-3gP"/>
+                            <constraint firstItem="pAo-Qq-jYc" firstAttribute="top" secondItem="WP7-jf-1Kz" secondAttribute="top" constant="60" id="hkV-GW-nIc"/>
                             <constraint firstItem="YPU-OY-RF4" firstAttribute="centerX" secondItem="tyZ-81-Unh" secondAttribute="centerX" id="xpi-KE-tH4"/>
                         </constraints>
                     </view>
