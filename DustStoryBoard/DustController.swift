@@ -12,7 +12,9 @@ import Alamofire
 class DustController: UIViewController {
     @IBOutlet var dateLabel: UILabel! // 날짜
     @IBOutlet var dustTable: UITableView! // table
+    @IBOutlet weak var maxMinLabel: UILabel!
     var airArray: [Air] = []
+    var maxMinArray: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +49,7 @@ class DustController: UIViewController {
         }
         self.dustTable.reloadData()
         if airArray.count != 0 {
-            var str = String(airArray[0].MSRDATE.dropLast(2)) // 날짜 가져온다. 뒤에 가져오는 '분'에 해당하는 2개 문자는 제거한다.
+            let str = String(airArray[0].MSRDATE.dropLast(2)) // 날짜 가져온다. 뒤에 가져오는 '분'에 해당하는 2개 문자는 제거한다.
             
         
             let dateStr = str.prefix(8)  // 시간을 제거한 날짜
@@ -80,9 +82,23 @@ extension DustController : UITableViewDataSource, UITableViewDelegate {
             label.text = self.airArray[indexPath.row].MSRSTENAME
         }
         if let label = cell.contentView.viewWithTag(2) as? UILabel {
-            print( self.airArray[indexPath.row].PM10)
             label.text = self.airArray[indexPath.row].PM10
         }
+        
+        let miseStr = self.airArray[indexPath.row].PM10
+        // 미세먼지 최고, 최저
+        print(miseStr)
+       // maxMinArray.append(Int(miseStr))
+        //Value of optional type 'Int?' must be unwrapped to a value of type 'Int'
+    
+        if let intValue = Int(miseStr ?? "") {
+            maxMinArray.append(intValue)
+        }
+        //maxMinLabel.text =
+        
+        
+        
+        // grade 문자열이 ""인거 같은데.. 왜지? -> 수정 필요
         if let label = cell.contentView.viewWithTag(3) as? UILabel {
             print(self.airArray[indexPath.row].GRADE)
             if self.airArray[indexPath.row].GRADE != "" {
@@ -91,6 +107,19 @@ extension DustController : UITableViewDataSource, UITableViewDelegate {
                 label.text = "N/A"
             }
         }
+        // maxMinArray에서 최대, 최소값을 maxMinLabel에 대입
+        let highestValue = maxMinArray.max()
+        let lowestValue = maxMinArray.min()
+
+        let highestString = highestValue != nil ? "\(highestValue!)" : "N/A"
+        let lowestString = lowestValue != nil ? "\(lowestValue!)" : "N/A"
+
+        maxMinLabel.text = "최고: \(highestString) / 최저: \(lowestString)"
+        
+        
         return cell
     }
+
+
+
 }

@@ -27,18 +27,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lud-ga-m5M">
-                                <rect key="frame" x="10" y="82" width="355" height="575"/>
+                                <rect key="frame" x="10" y="82" width="355" height="504.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DustCell" id="bXS-Qy-BMI">
-                                        <rect key="frame" x="0.0" y="50" width="355" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="355" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bXS-Qy-BMI" id="Stk-Ct-qiQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-1G-OuD">
-                                                    <rect key="frame" x="26" y="11" width="50" height="21"/>
+                                                    <rect key="frame" x="26" y="11" width="50" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hW8-gI-xG6"/>
                                                     </constraints>
@@ -47,7 +47,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ1-LG-79w">
-                                                    <rect key="frame" x="152.5" y="11" width="50" height="21"/>
+                                                    <rect key="frame" x="152.5" y="11.5" width="50" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="uBS-0f-ZG6"/>
                                                     </constraints>
@@ -56,7 +56,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qc-zu-uhM">
-                                                    <rect key="frame" x="284" y="11" width="50" height="21"/>
+                                                    <rect key="frame" x="284" y="11.5" width="50" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="W45-Bo-m56"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="75" id="pp0-qj-0Dz"/>
@@ -85,17 +85,25 @@
                                     <outlet property="delegate" destination="46x-ac-XSz" id="hmG-uP-xru"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최고/최저" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fed-qz-dlY">
+                                <rect key="frame" x="155.5" y="606.5" width="64" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QGR-dW-k1s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lud-ga-m5M" firstAttribute="centerX" secondItem="E81-Zw-5eu" secondAttribute="centerX" id="1aI-GO-Qdl"/>
-                            <constraint firstItem="QGR-dW-k1s" firstAttribute="bottom" secondItem="Lud-ga-m5M" secondAttribute="bottom" constant="10" id="2kX-4l-2KZ"/>
+                            <constraint firstItem="fed-qz-dlY" firstAttribute="top" secondItem="Lud-ga-m5M" secondAttribute="bottom" constant="20" id="Gtg-vi-1cB"/>
                             <constraint firstItem="Lud-ga-m5M" firstAttribute="leading" secondItem="QGR-dW-k1s" secondAttribute="leading" constant="10" id="MO5-zI-qga"/>
                             <constraint firstItem="QGR-dW-k1s" firstAttribute="trailing" secondItem="Lud-ga-m5M" secondAttribute="trailing" constant="10" id="dXw-fZ-IU2"/>
+                            <constraint firstItem="QGR-dW-k1s" firstAttribute="bottom" secondItem="fed-qz-dlY" secondAttribute="bottom" constant="40" id="frE-8k-RB4"/>
                             <constraint firstItem="BKz-ij-E85" firstAttribute="top" secondItem="QGR-dW-k1s" secondAttribute="top" constant="20" id="g8y-Du-D4T"/>
                             <constraint firstItem="Lud-ga-m5M" firstAttribute="top" secondItem="BKz-ij-E85" secondAttribute="bottom" constant="20" id="gRC-Nl-kr1"/>
                             <constraint firstItem="BKz-ij-E85" firstAttribute="centerX" secondItem="E81-Zw-5eu" secondAttribute="centerX" id="lFt-0N-wVU"/>
+                            <constraint firstItem="fed-qz-dlY" firstAttribute="centerX" secondItem="E81-Zw-5eu" secondAttribute="centerX" id="y0G-wQ-1Fu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="서울 구별 미세먼지" id="2fI-G6-1Zu">
@@ -108,11 +116,12 @@
                     <connections>
                         <outlet property="dateLabel" destination="BKz-ij-E85" id="qbV-7e-VWC"/>
                         <outlet property="dustTable" destination="Lud-ga-m5M" id="hy9-WT-wAb"/>
+                        <outlet property="maxMinLabel" destination="fed-qz-dlY" id="4pB-S6-uJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bb0-bS-sPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="0.0"/>
+            <point key="canvasLocation" x="1404" y="-0.44977511244377816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B69-2x-3fe">
@@ -135,7 +144,7 @@
         <!--DustDust-->
         <scene sceneID="GbO-Gr-fHS">
             <objects>
-                <viewController id="czb-gl-5KQ" customClass="LoginController" customModule="DuksungSchedule" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="czb-gl-5KQ" customClass="LoginController" customModule="DustSB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tyZ-81-Unh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
