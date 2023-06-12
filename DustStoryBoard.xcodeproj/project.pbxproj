@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00733E172A360DC900FAD5F2 /* LoginController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 00733E162A360DC900FAD5F2 /* LoginController .swift */; };
+		00733E192A3678FC00FAD5F2 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00733E182A3678FC00FAD5F2 /* DetailController.swift */; };
 		390094DE24B9AE8700A61C94 /* Dust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390094DD24B9AE8700A61C94 /* Dust.swift */; };
 		39A5337C24B9626E006AE6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5337B24B9626E006AE6F0 /* AppDelegate.swift */; };
 		39A5337E24B9626E006AE6F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5337D24B9626E006AE6F0 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		00733E162A360DC900FAD5F2 /* LoginController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController .swift"; sourceTree = "<group>"; };
+		00733E182A3678FC00FAD5F2 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		3319D20A1C024363F86E1743 /* Pods-DustStoryBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DustStoryBoard.debug.xcconfig"; path = "Target Support Files/Pods-DustStoryBoard/Pods-DustStoryBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		390094DD24B9AE8700A61C94 /* Dust.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dust.swift; sourceTree = "<group>"; };
 		39A5337824B9626E006AE6F0 /* DustSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DustSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 		39A5337A24B9626E006AE6F0 /* DustStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				00733E182A3678FC00FAD5F2 /* DetailController.swift */,
 				00733E162A360DC900FAD5F2 /* LoginController .swift */,
 				39A5337B24B9626E006AE6F0 /* AppDelegate.swift */,
 				39A5337D24B9626E006AE6F0 /* SceneDelegate.swift */,
@@ -217,6 +220,7 @@
 				00733E172A360DC900FAD5F2 /* LoginController .swift in Sources */,
 				39A5337C24B9626E006AE6F0 /* AppDelegate.swift in Sources */,
 				39A5337E24B9626E006AE6F0 /* SceneDelegate.swift in Sources */,
+				00733E192A3678FC00FAD5F2 /* DetailController.swift in Sources */,
 				39B2B11624BC3920002C21A6 /* DustController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
